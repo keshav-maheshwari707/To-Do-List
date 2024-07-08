@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  padding: 10px;
+}
+.to-do-app {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ececec;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+.to-do-app h2 {
+  color: rgb(32, 38, 57);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.to-do-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #d9dad7;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #1a2639;
+  color: #ececec;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 13px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(uncheched.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background: #d9dad7;
+}
+@media (max-width: 768px) {
+  .to-do-app {
+    padding: 30px 20px 50px;
+  }
+
+  .row {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .to-do-app {
+    padding: 20px 15px 40px;
+  }
+
+  .row {
+    padding: 8px;
+  }
+
+  input {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 16px;
+    padding: 10px 8px 10px 40px;
+  }
+
+  ul li::before {
+    height: 24px;
+    width: 24px;
+    top: 10px;
+    left: 6px;
+  }
+
+  ul li span {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
